@@ -22,13 +22,66 @@ body
 	
 }
 
-#portada-logo
+#portada-logo                 /*  esto es para las paginas de relases y tutoriales donde va mi logo*/
 {
 	background-color:#AED6F1;
 
 	float:center;
 	height:80px;
 	width:100%;
+	
+}
+
+#encabezado-logo           /*  esto es para las paginas de relases y tutoriales deonde van los links*/
+{
+	background-color:#AED6F1;
+    text-align:left;
+	float:left;
+	height:180px;
+	width:50%;
+	
+}
+
+#cuerpo-fuera-tutoriales          
+{
+	background-color:#85C1E9;
+
+    text-align:left;
+	float:left;
+	height:1000px;
+	width:100%;
+}
+
+#cuerpo-dentro-tutoriales          
+{
+	background-color:#FCF3CF;
+	font-size: 20px;	
+    text-align:left;
+    margin-left: auto;
+    margin-right: auto;
+	float:center;
+	height:800px;
+	width:80%;
+}
+#cuerpo-dentro-tutoriales-exp         
+{
+	background-color:#FCF3CF;
+	font-size: 20px;	
+    text-align:left;
+    margin-left: auto;
+    margin-right: auto;
+	float:center;
+	height:1000px;
+	width:90%;
+}
+
+#encabezado
+{
+	background-color:#AED6F1;
+    text-align:center;
+	float:left;
+	height:180px;
+	width:50%;
 	
 }
 #portada

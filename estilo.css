@@ -3,6 +3,7 @@
 .rojo{color:red;}
 
 .color-fondo{color:#FCF3CF;}
+.color-fondo-oscuro{color:#5499C7;}
 .color-revive{color:#2E86C1;}
 .color-jugg{color:#CB4335;}
 .color-doble{color:#9C640C;}
@@ -12,7 +13,22 @@
 
 
 /* tamaño para letras */
-
+.letra-grande{font-size: 80px;}
+.letra-media1{font-size: 30px;}
 
 /* Colores links */
-a:hover {color:#FCF3CF}
+a:hover {color:#FCF3CF;}
+
+.url:hover{color:black;}
+.url:visited{color:purple;}
+
+
+
+/* tablas estilos */
+table {
+       
+
+       width:100%;
+       resize:both;
+      
+}​
