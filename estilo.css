@@ -1,3 +1,18 @@
 
 /* Colores para letras */
 .rojo{color:red;}
+
+.color-fondo{color:#FCF3CF;}
+.color-revive{color:#2E86C1;}
+.color-jugg{color:#CB4335;}
+.color-doble{color:#9C640C;}
+.color-speed{color:#28B463;}
+
+/* fuente para letras */
+
+
+/* tamaño para letras */
+
+
+/* Colores links */
+a:hover {color:#FCF3CF}

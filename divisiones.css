@@ -1,0 +1,112 @@
+
+/*  */
+
+*{
+	margin:0;
+
+}
+body
+{
+	background-color:#FCF3CF;
+	position: absolute;
+	font-family:Helvetica;
+	margin:0;
+	width:100%;
+	height:100%;
+	
+	
+}
+
+#portada-logo
+{
+	background-color:#AED6F1;
+	float:center;
+	height:10%;
+	width:100%;
+	
+}
+#portada
+{
+	background-color:#AED6F1;
+	text-align:center;
+	float:center;
+	height:60%;
+	width:100%;
+	
+}
+#revive
+{
+	background-color:#85C1E9;
+	text-align:center;
+	float:left;
+	height:15%;
+	width:25%;
+	
+}
+#doble
+{
+	background-color:#F7DC6F;
+	text-align:center;
+	float:left;
+	height:15%;
+	width:25%;
+	
+}
+#jugg
+{
+	background-color:#EC7063;
+	text-align:center;
+	float:left;
+	height:15%;
+	width:25%;
+	
+}
+#speed
+{
+	background-color:#82E0AA;
+	text-align:center;
+	float:left;
+	height:15%;
+	width:25%;
+	
+}
+
+#texto-portada1
+{
+	background-color:#EBF5FB;
+	text-align:center;
+	color:#FCF3CF;
+	font-size: 30px;
+	float:left;
+	height:60%;
+	width:50%;
+	
+}
+
+#texto-portada2
+{
+	background-color:#7FB3D5;
+	text-align:center;
+	float:left;
+	height:60%;
+	width:50%;
+	
+}
+
+#franja    /* lina del color del fondo */
+{
+	text-align:center;
+	float:left;
+	height:0.5%;
+	width:100%;	
+}
+
+#pie
+{
+    background-color:#21618C;
+	text-align:center;
+	float:left;
+	height:5%;
+	width:100%;
+	
+}
