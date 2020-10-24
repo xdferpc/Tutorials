@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="utf-8">
-  <title>electrician en el inicio</title>
+  <title>Cambiar puntos de inicio</title>
   
   <link rel="stylesheet" href="../estilo.css"> <!-- liqueo hoja de estilos-->
   <link rel="stylesheet" href="../divisiones.css"> <!-- liqueo hoja de estilos divisiones-->
@@ -34,23 +34,33 @@
  <br><br>
  
        <div id="cuerpo-dentro-tutoriales-exp"> 
-        <h1>Electricidad al inicio</h1><br>
+        <h1>Cambiar los puntos del jugador</h1><br>
 		<h3>Version:1.0</h3><br>
 		<p><b>Descripcion:</b><br>
-		Se encienden todo lo que necesita luz al iniciar el mapa <br><br>
+		Cambia los puntos del jugador al iniciar el mapa y en vez de iniciar con 500 puntos , empieze con 5000 esta orientado a probar mapas etc... <br><br>
 		<b>Instruciones:</b><br> 
-		1.Abre tu mapname.gsc que se encuentra en usermaps/zm_tumapname/scripts/zm y añada esto a su mapname.gsc<br>
+		1.Abre tu mapname.gsc que se encuentra en usermaps/zm_tumapname/scripts/zm y añada lo siguiente su mapname.gsc<br>
 		</p>
-		<textarea cols='80' rows='1'>
-          level flag::set( "power_on" ); 
-		
-        </textarea>
 		<p>
-		2.ponlo debajo de:<br>
-		function main()<br>
-		{<br>
-		3.compila el mapa y ya estara listo<br><br>
-		<b>Actualizado:</b> 23/10/2020
+		2.Debajo de:<br>
+		 zm_usermap::main();<br>
+		<textarea cols='80' rows='1'>
+level thread lots_o_points( 500 ); 
+        </textarea><br>
+		3.Ponga esto al final de su .gsc<br>
+		<textarea cols='80' rows='9'>
+function lots_o_points( points )
+{
+level flag::wait_till( "all_players_connected" );
+players = getplayers();
+  for( i=0;i<players.size;i++ )
+  {
+    players[i].score = points;
+  }
+} 
+        </textarea><br>
+		4.compila el mapa y ya estara listo<br><br>
+		<b>Actualizado:</b> 24/10/2020
 		</p>
       </div>
 	   
