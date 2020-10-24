@@ -2,19 +2,72 @@
 <html lang="es">
 <head>
   <meta charset="utf-8">
-  <title>peticiones</title>
+  <title>Peticiones</title>
   
   <link rel="stylesheet" href="estilo.css"> <!-- liqueo hoja de estilos-->
+  <link rel="stylesheet" href="estilo-formulario.css"> <!-- liqueo hoja de estilos-->
   <link rel="stylesheet" href="divisiones.css"> <!-- liqueo hoja de estilos divisiones-->
   <link rel="icon" type="image/png" href="images/xdfer.png"> <!-- liqueo icono de la web-->
+  <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400' rel='stylesheet' type='text/css'>
   
 </head>
 
 <body>
 
-<p> Web en construccion</p>
 
+<div id="encabezado-logo">
+<img src="images/logo.png" width="130" height="130">
+</div>
+ 
+<div id="encabezado">
+<h1> <br> <a href= index.html style="text-decoration:none" class="color-fondo-oscuro">Home</a> &nbsp; 
+<a href= tutoriales.html style="text-decoration:none" class="color-fondo-oscuro">Tutoriales</a> &nbsp;
+<a href= lanzamientos.html style="text-decoration:none" class="color-fondo-oscuro">Lanzamientos</a> &nbsp;
+<a href= comparte.html style="text-decoration:none" class="color-fondo-oscuro">Compartir</a> &nbsp;
+<a href= peticiones.html style="text-decoration:none" class="color-fondo-oscuro">Peticiones</a></h1> 
+
+</div>
+
+<div id="franja">   <!-- linea del color del fondo para separar letras etc...-->
+ </div>
+  
+  <div id="cuerpo-fuera-peticiones"> 
+   <h1></br></h1>
+   <center>
+   <p class ="color-speed letra-grande">  Peticiones </p>
+    <h1></br></br></h1>
+ 
+       
+	   
+         	<form action="envia.php" method="post" class="form-consulta"> 
+		<label>Nombre: <span>*</span>
+			<input type="text" name="nombre" placeholder="Nombre y apellido" class="campo-form" required>
+		</label>
+		
+		<label>Email: <span>*</span>
+			<input type="email" name="email" placeholder="Email" class="campo-form" required>
+		</label>
+		
+		<label>Que es lo que quieres que añada:
+			<textarea name="consulta" class="campo-form"></textarea>
+		</label>
+
+		<input type="submit" value="Enviar" class="btn-form">
+	   </form>
+	</center>		
+      
+	   
+ 
+  </div>
+
+
+<div id="franja">   <!-- linea del color del fondo para separar letras etc...-->
+ </div>
  
  
+  <div id="pie">
+  <p> <br><h3 class="color-fondo"> xdferpc © </h3> </p>
+  </div>
+
 </body>
 </html>
