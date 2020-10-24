@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="utf-8">
-  <title>Cambiar puntos de inicio</title>
+  <title>Velocidad de los zombies</title>
   
   <link rel="stylesheet" href="../estilo.css"> <!-- liqueo hoja de estilos-->
   <link rel="stylesheet" href="../divisiones.css"> <!-- liqueo hoja de estilos divisiones-->
@@ -34,30 +34,28 @@
  <br><br>
  
        <div id="cuerpo-dentro-tutoriales-exp"> 
-        <h1>Cambiar los puntos del jugador</h1><br>
+        <h1>Velocidad de los zombies</h1><br>
 		<h3>Version:1.0</h3><br>
 		<p><b>Descripcion:</b><br>
-		Cambia los puntos del jugador al iniciar el mapa y en vez de iniciar con 500 puntos , empieze con 5000 esta orientado a probar mapas etc... <br><br>
+		Con esto puedes aumentar o disminuir la velocidad de los zombies que aparecen apartir de la <b> Ronda:1</b> <br><br>
 		<b>Instrucciones:</b><br> 
-		1.Abre tu mapname.gsc que se encuentra en usermaps/zm_tumapname/scripts/zm y añada lo siguiente su mapname.gsc<br>
+		1.Abra su mapname.gsc que se encuentra en usermaps/zm_tumapname/scripts/zm y añada lo siguiente su mapname.gsc<br>
 		</p>
 		<p>
 		2.Debajo de:<br>
 		 zm_usermap::main();<br>
 		<textarea cols='80' rows='1'>
-level thread lots_o_points( 500 ); 
+level thread new_zombie_speed();
         </textarea><br>
-		3.Ponga esto al final de su .gsc<br>
-		<textarea cols='80' rows='9'>
-function lots_o_points( points )
+		3.Ponga esto al final de su mapname.gsc<br>
+		<textarea cols='240' rows='10'>
+function new_zombie_speed()
 {
-level flag::wait_till( "all_players_connected" );
-players = getplayers();
-  for( i=0;i<players.size;i++ )
-  {
-    players[i].score = points;
-  }
-} 
+    level flag::wait_till( "initial_blackscreen_passed" );
+    zombie_utility::set_zombie_var( "zombie_move_speed_multiplier",       75,   false );  //  Multiplica por el numero de la ronda para obtener el valor de la velocidad del zombie.  0-40 = Andar, 41-70 = Correr, 71+ = sprint
+    zombie_utility::set_zombie_var( "zombie_move_speed_multiplier_easy",  75,   false );  //  Multiplica por el numero de la ronda para obtener el valor de la velocidad del zombie.  0-40 = Andar, 41-70 = Correr, 71+ = sprint
+    level.zombie_move_speed         = level.round_number * level.zombie_vars["zombie_move_speed_multiplier"];
+}
         </textarea><br>
 		4.compila el mapa y ya estara listo<br><br>
 		<b>Actualizado:</b> 24/10/2020

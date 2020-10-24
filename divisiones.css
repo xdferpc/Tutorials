@@ -42,6 +42,28 @@ body
 	
 }
 
+#cuerpo-fuera-lanzamientos          
+{
+	background-color:#F7DC6F;
+
+    text-align:left;
+	float:left;
+	height:1000px;
+	width:100%;
+}
+
+#cuerpo-dentro-lanzamientos          
+{
+	background-color:#FCF3CF;
+	font-size: 20px;	
+    text-align:left;
+    margin-left: auto;
+    margin-right: auto;
+	float:center;
+	height:800px;
+	width:80%;
+}
+
 #cuerpo-fuera-tutoriales          
 {
 	background-color:#85C1E9;

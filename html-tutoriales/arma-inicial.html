@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="utf-8">
-  <title>Cambiar puntos de inicio</title>
+  <title>Cambiar el arma inicial</title>
   
   <link rel="stylesheet" href="../estilo.css"> <!-- liqueo hoja de estilos-->
   <link rel="stylesheet" href="../divisiones.css"> <!-- liqueo hoja de estilos divisiones-->
@@ -34,32 +34,24 @@
  <br><br>
  
        <div id="cuerpo-dentro-tutoriales-exp"> 
-        <h1>Cambiar los puntos del jugador</h1><br>
+        <h1>Cambiar el arma inicial</h1><br>
 		<h3>Version:1.0</h3><br>
 		<p><b>Descripcion:</b><br>
-		Cambia los puntos del jugador al iniciar el mapa y en vez de iniciar con 500 puntos , empieze con 5000 esta orientado a probar mapas etc... <br><br>
+		Cambia el arma incial con la que aparece el jugador al iniciar el mapa<br><br>
 		<b>Instrucciones:</b><br> 
-		1.Abre tu mapname.gsc que se encuentra en usermaps/zm_tumapname/scripts/zm y añada lo siguiente su mapname.gsc<br>
+		1. Abra su mapname.gsc que se encuentra en usermaps/zm_tumapname/scripts/zm y añada lo siguiente su mapname.gsc<br>
 		</p>
 		<p>
 		2.Debajo de:<br>
 		 zm_usermap::main();<br>
-		<textarea cols='80' rows='1'>
-level thread lots_o_points( 500 ); 
+		<textarea cols='80' rows='5'>
+		
+startingWeapon = "ray_gun";//cambiar por el arma que quieras
+weapon = getWeapon(startingWeapon);
+level.start_weapon = (weapon);
         </textarea><br>
-		3.Ponga esto al final de su .gsc<br>
-		<textarea cols='80' rows='9'>
-function lots_o_points( points )
-{
-level flag::wait_till( "all_players_connected" );
-players = getplayers();
-  for( i=0;i<players.size;i++ )
-  {
-    players[i].score = points;
-  }
-} 
-        </textarea><br>
-		4.compila el mapa y ya estara listo<br><br>
+		Aqui un lista de armas de stock de bo3:<a href="https://pastebin.com/JZWkCKFT" class= "url" target="_blank">Lista de armas</a><br>
+		3.compila el mapa y ya estara listo<br><br>
 		<b>Actualizado:</b> 24/10/2020
 		</p>
       </div>
