@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Pausar el spawneo de los zombies</title>
+  
+  <link rel="stylesheet" href="../estilo.css"> <!-- liqueo hoja de estilos-->
+  <link rel="stylesheet" href="../divisiones.css"> <!-- liqueo hoja de estilos divisiones-->
+  <link rel="icon" type="image/png" href="images/xdfer.png"> <!-- liqueo icono de la web-->
+  
+</head>
+
+<body>
+
+
+<div id="encabezado-logo">
+<img src="images/logo.png" width="130" height="130">
+</div>
+ 
+<div id="encabezado">
+<h1> <br> <a href= ../index.html style="text-decoration:none" class="color-fondo-oscuro">Home</a> &nbsp; 
+<a href= ../tutoriales.html style="text-decoration:none" class="color-fondo-oscuro">Tutoriales</a> &nbsp;
+<a href= ../lanzamientos.html style="text-decoration:none" class="color-fondo-oscuro">Lanzamientos</a> &nbsp;
+<a href= ../comparte.html style="text-decoration:none" class="color-fondo-oscuro">Compartir</a> &nbsp;
+<a href= ../peticiones.html style="text-decoration:none" class="color-fondo-oscuro">Peticiones</a></h1> 
+
+</div>
+
+<div id="franja">   <!-- linea del color del fondo para separar letras etc...-->
+ </div>
+ 
+  
+  <div id="cuerpo-fuera-tutoriales"> 
+ <br><br>
+ 
+       <div id="cuerpo-dentro-tutoriales-exp"> 
+        <h1>Pausar el spawneo de los zombies</h1><br>
+		<h3>Version:1.0</h3><br>
+		<p><b>Descripcion:</b><br>
+		Con esta funcion puedes pausar el spawneo de los zombies durante <i>"X"</i> segundos<br><br>
+		<b>Instrucciones:</b><br> 
+		1.Abra su mapname.gsc que se encuentra en usermaps/zm_tumapname/scripts/zm y añada lo siguiente su mapname.gsc<br>
+		</p>
+		<p>
+		2.Meta la siguiete función en cualquier parte de su script que quiera , o si no tiene pue debajo de: zm_usermap::main();<br>
+
+		<textarea cols='120' rows='1'>
+level thread delay_spawning(10); // lo pausa por 10 segundos
+        </textarea><br>
+		3.Ponga esto al final de su mapname.gsc<br>
+		<textarea cols='120' rows='31'>
+function delay_spawning( n_spawn_delay )
+{
+    level endon( "disable_nuke_delay_spawning" ); 
+    
+    if( IS_TRUE( level.disable_nuke_delay_spawning ) )
+    {
+        return;
+    }
+
+    b_spawn_zombies_before_nuke = level flag::get( "spawn_zombies" );
+    
+    level flag::clear( "spawn_zombies" );
+
+    level waittill( "something_complete" );
+
+
+    if( IS_TRUE( level.disable_nuke_delay_spawning ) )
+    {
+        return;
+    }
+    
+    // A delay where there will be no zombies alive    
+    wait( n_spawn_delay );
+    
+    if ( b_spawn_zombies_before_nuke )
+    {
+        // only spawn zombies again if it was spawning zombies before the nuke
+        level flag::set( "spawn_zombies" );
+    }
+}
+        </textarea><br>
+		4.compila el mapa y ya estara listo<br><br>
+		<b>Actualizado:</b> 25/10/2020
+		</p>
+      </div>
+	   
+ 
+  </div>
+
+
+<div id="franja">   <!-- linea del color del fondo para separar letras etc...-->
+ </div>
+ 
+ 
+  <div id="pie">
+  <p> <br><h3 class="color-fondo"> xdferpc © </h3> </p>
+  </div>
+
+</body>
+</html>

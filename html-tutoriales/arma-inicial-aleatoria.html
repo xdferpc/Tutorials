@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Arma inicial aleatoria</title>
+  
+  <link rel="stylesheet" href="../estilo.css"> <!-- liqueo hoja de estilos-->
+  <link rel="stylesheet" href="../divisiones.css"> <!-- liqueo hoja de estilos divisiones-->
+  <link rel="icon" type="image/png" href="images/xdfer.png"> <!-- liqueo icono de la web-->
+  
+</head>
+
+<body>
+
+
+<div id="encabezado-logo">
+<img src="images/logo.png" width="130" height="130">
+</div>
+ 
+<div id="encabezado">
+<h1> <br> <a href= ../index.html style="text-decoration:none" class="color-fondo-oscuro">Home</a> &nbsp; 
+<a href= ../tutoriales.html style="text-decoration:none" class="color-fondo-oscuro">Tutoriales</a> &nbsp;
+<a href= ../lanzamientos.html style="text-decoration:none" class="color-fondo-oscuro">Lanzamientos</a> &nbsp;
+<a href= ../comparte.html style="text-decoration:none" class="color-fondo-oscuro">Compartir</a> &nbsp;
+<a href= ../peticiones.html style="text-decoration:none" class="color-fondo-oscuro">Peticiones</a></h1> 
+
+</div>
+
+<div id="franja">   <!-- linea del color del fondo para separar letras etc...-->
+ </div>
+ 
+  
+  <div id="cuerpo-fuera-tutoriales"> 
+ <br><br>
+ 
+       <div id="cuerpo-dentro-tutoriales-exp"> 
+        <h1>Arma inicial aleatoria</h1><br>
+		<h3>Version:1.0</h3><br>
+		<p><b>Descripcion:</b><br>
+		Con esto cada vez que el jugador inicie la partida en ese mapa le va dar un arma aleatoria inicial <br><br>
+		<b>Instrucciones:</b><br> 
+		1.Abra su mapname.gsc que se encuentra en usermaps/zm_tumapname/scripts/zm y añada lo siguiente su mapname.gsc<br>
+		</p>
+		<p>
+		2.Debajo de:<br>
+		 zm_usermap::main();<br>
+		<textarea cols='80' rows='1'>
+thread PickRandomStartingWeapon();
+        </textarea><br>
+		3.Ponga esto al final de su mapname.gsc<br>
+		<textarea cols='120' rows='10'>
+function PickRandomStartingWeapon()
+{
+
+	// lista de armas
+	listOfStartingWeapons = strTok("pistol_standard pistol_burst pistol_fullauto pistol_energy "," ");
+
+	startingWeapon = array::random(listOfStartingWeapons);
+	level.start_weapon = getWeapon(startingWeapon);
+}
+
+        </textarea><br>
+		4.compila el mapa y ya estara listo<br><br>
+		<b>Actualizado:</b> 25/10/2020
+		</p>
+      </div>
+	   
+ 
+  </div>
+
+
+<div id="franja">   <!-- linea del color del fondo para separar letras etc...-->
+ </div>
+ 
+ 
+  <div id="pie">
+  <p> <br><h3 class="color-fondo"> xdferpc © </h3> </p>
+  </div>
+
+</body>
+</html>
