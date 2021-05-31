@@ -1,28 +1,23 @@
 ﻿<?php
-$remitente = $_POST['email'];
-$destinatario = 'xdferpc@gmail.com'; // en esta línea va el mail del destinatario.
-$asunto = 'WEB'; // acá se puede modificar el asunto del mail
-if (!$_POST){
-?>
+$nombre = $_POST['nombre'];
+$mail = $_POST['mail'];
 
-<?php
-}else{
-	 
-    $cuerpo = "Nombre y apellido: " . $_POST["nombre"] . "\r\n"; 
-    $cuerpo .= "Email: " . $_POST["email"] . "\r\n";
-	$cuerpo .= "Consulta: " . $_POST["consulta"] . "\r\n";
-	//las líneas de arriba definen el contenido del mail. Las palabras que están dentro de $_POST[""] deben coincidir con el "name" de cada campo. 
-	// Si se agrega un campo al formulario, hay que agregarlo acá.
+$header = 'From: ' . $mail . " \r\n";
+$header .= "X-Mailer: PHP/" . phpversion() . " \r\n";
+$header .= "Mime-Version: 1.0 \r\n";
+$header .= "Content-Type: text/plain";
 
-    $headers  = "MIME-Version: 1.0\n";
-    $headers .= "Content-type: text/plain; charset=utf-8\n";
-    $headers .= "X-Priority: 3\n";
-    $headers .= "X-MSMail-Priority: Normal\n";
-    $headers .= "X-Mailer: php\n";
-    $headers .= "From: \"".$_POST['nombre']."\" <".$remitente.">\n";
+$mensaje = "Este mensaje fue enviado por " . $nombre . ",
+ de la empresa " . $empresa . " \r\n";
+$mensaje .= "Su e-mail es: " . $mail . " \r\n";
+$mensaje .= "Mensaje: " . $_POST['mensaje'] . " \r\n";
+$mensaje .= "Enviado el " . date('d/m/Y', time());
 
-    mail($destinatario, $asunto, $cuerpo, $headers);
-    
-   include 'confirma.html'; //se debe crear un html que confirma el envío
-}
+$para = xdferpc@gmail.com;
+$asunto = Asunto web;
+
+mail($para, $asunto, $mensaje, $header);
+echo"<script>alert('correo enviado correctamente')</script>";
+echo"<script>setTimeout(\"location.href='index.html'\",1000)</script>";
+
 ?>
