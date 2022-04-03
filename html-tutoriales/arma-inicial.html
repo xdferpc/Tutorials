@@ -1,28 +1,24 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
+<html lang="es"><head>
   <meta charset="utf-8">
-  <title>Cambiar el arma inicial</title>
   
-  <link rel="stylesheet" href="../estilo.css"> <!-- liqueo hoja de estilos-->
-  <link rel="stylesheet" href="../divisiones.css"> <!-- liqueo hoja de estilos divisiones-->
-  <link rel="icon" type="image/png" href="images/xdfer.png"> <!-- liqueo icono de la web-->
   
-</head>
-
+  <title>Cambiar el arma inicial</title><link rel="stylesheet" href="../estilo.css"><!-- liqueo hoja de estilos--> 
+  <link rel="stylesheet" href="../divisiones.css"><!-- liqueo hoja de estilos divisiones--> 
+  <link rel="icon" type="image/png" href="images/xdfer.png"><!-- liqueo icono de la web--></head>
 <body>
 
 
 <div id="encabezado-logo">
-<img src="images/logo.png" width="130" height="130">
+<img src="images/logo.png" height="130" width="130">
 </div>
  
 <div id="encabezado">
-<h1> <br> <a href= ../index.html style="text-decoration:none" class="color-fondo-oscuro">Home</a> &nbsp; 
-<a href= ../tutoriales.html style="text-decoration:none" class="color-fondo-oscuro">Tutoriales</a> &nbsp;
-<a href= ../lanzamientos.html style="text-decoration:none" class="color-fondo-oscuro">Lanzamientos</a> &nbsp;
-<a href= ../comparte.html style="text-decoration:none" class="color-fondo-oscuro">Compartir</a> &nbsp;
-<a href= ../peticiones.html style="text-decoration:none" class="color-fondo-oscuro">Peticiones</a></h1> 
+<h1> <br> <a href="../index.html" style="text-decoration: none;" class="color-fondo-oscuro">Home</a> &nbsp; 
+<a href="../tutoriales.html" style="text-decoration: none;" class="color-fondo-oscuro">Tutoriales</a> &nbsp;
+<a href="../lanzamientos.html" style="text-decoration: none;" class="color-fondo-oscuro">Lanzamientos</a> &nbsp;
+<a href="../aprende.html" style="text-decoration: none;" class="color-fondo-oscuro">Aprende</a> &nbsp;
+<a href="../peticiones.html" style="text-decoration: none;" class="color-fondo-oscuro">Peticiones</a></h1> 
 
 </div>
 
@@ -34,25 +30,18 @@
  <br><br>
  
        <div id="cuerpo-dentro-tutoriales-exp"> 
-        <h1>Cambiar el arma inicial</h1><br>
-		<h3>Version:1.0</h3><br>
-		<p><b>Descripcion:</b><br>
-		Cambia el arma incial con la que aparece el jugador al iniciar el mapa<br><br>
-		<b>Instrucciones:</b><br> 
-		1. Abra su mapname.gsc que se encuentra en usermaps/zm_tumapname/scripts/zm y añada lo siguiente su mapname.gsc<br>
+        <h1>&nbsp;&nbsp;&nbsp;&nbsp;</h1><h1>&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 102, 255);">Cambiar el arma inicial</span></h1><span style="font-weight: bold;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </span><span style="color: rgb(51, 204, 255);">Version:1.0</span><br><br>
+		<p><b>&nbsp;&nbsp;&nbsp; -Descripcion:</b><br>&nbsp;&nbsp;&nbsp; Cambia el arma incial con la que aparece el jugador al iniciar el mapa<br><br>
+		<b>&nbsp;&nbsp;&nbsp; -Instrucciones:</b><br>&nbsp;&nbsp;&nbsp;
+1. Abra su mapname.gsc que se encuentra en
+usermaps/zm_tumapname/scripts/zm y añada lo siguiente su mapname.gsc</p><p><br>
 		</p>
-		<p>
-		2.Debajo de:<br>
-		 zm_usermap::main();<br>
-		<textarea cols='80' rows='5'>
-		
+		<p>&nbsp;&nbsp;&nbsp; 2.Debajo de:</p><p>&nbsp;&nbsp;&nbsp; zm_usermap::main();</p><p></p><p style="text-align: left;">
+		<textarea cols="80" rows="5">		
 startingWeapon = "ray_gun";//cambiar por el arma que quieras
 weapon = getWeapon(startingWeapon);
 level.start_weapon = (weapon);
-        </textarea><br>
-		Aqui un lista de armas de stock de bo3:<a href="https://pastebin.com/JZWkCKFT" class= "url" target="_blank">Lista de armas</a><br>
-		3.compila el mapa y ya estara listo<br><br>
-		<b>Actualizado:</b> 24/10/2020
+        </textarea><br></p><p></p><p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;Aqui un lista de armas de stock de bo3:<a href="https://pastebin.com/JZWkCKFT" class="url" target="_blank">Lista de armas</a><br></p><p></p><p>&nbsp;&nbsp;&nbsp; 3.compila el mapa y ya estara listo</p><p></p><p></p><p><b>Actualizado:</b> 24/10/2020
 		</p>
       </div>
 	   
@@ -65,8 +54,7 @@ level.start_weapon = (weapon);
  
  
   <div id="pie">
-  <p> <br><h3 class="color-fondo"> xdferpc © </h3> </p>
+  <p> <br></p><h3 class="color-fondo"> xdferpc © </h3> 
   </div>
 
-</body>
-</html>
+</body></html>

@@ -3,7 +3,7 @@
   <meta charset="utf-8">
   
   
-  <title>Quita el HUD del jugador</title><link rel="stylesheet" href="../estilo.css"><!-- liqueo hoja de estilos--> 
+  <title>Maxima municion Bo4</title><link rel="stylesheet" href="../estilo.css"><!-- liqueo hoja de estilos--> 
   <link rel="stylesheet" href="../divisiones.css"><!-- liqueo hoja de estilos divisiones--> 
   <link rel="icon" type="image/png" href="images/xdfer.png"><!-- liqueo icono de la web--></head>
 
@@ -31,27 +31,35 @@
  <br><br>
  
        <div id="cuerpo-dentro-tutoriales-exp"> 
-        <h1>&nbsp;&nbsp;<span style="color: rgb(51, 102, 255);">Quitar el HUD</span></h1>
+        <h1><br></h1><h1>&nbsp;&nbsp;<span style="color: rgb(51, 102, 255);">Maxima municion Bo4</span></h1>
 		<h3>&nbsp;&nbsp;&nbsp;<span style="color: rgb(51, 204, 255);"> Version:1.0</span></h3><br>
-		<p><b>&nbsp;&nbsp;&nbsp; -Descripcion:</b><br>&nbsp;&nbsp;&nbsp;
-Quita el HUD del jugador 10 seg. despues de iniciar el mapa esta
-caracteristica va orientado a los creadores de mapa para poder hacer
-capturas &nbsp;&nbsp;&nbsp; de su mapa<br><br>
+		<p><b>&nbsp;&nbsp;&nbsp; -Descripcion:</b><br>&nbsp;&nbsp;&nbsp; Con esto al coger municion maxima tambien se te recarga las balas del cargador <br><br>
 		<b>&nbsp;&nbsp;&nbsp; -Instrucciones:</b><br>&nbsp;&nbsp;&nbsp;
 1.Abra su mapname.gsc que se encuentra en
 usermaps/zm_tumapname/scripts/zm y añada lo siguiente su mapname.gsc<br>
 		</p>
 		<p></p><p>&nbsp;&nbsp;&nbsp; 2.Debajo de:<br>&nbsp;&nbsp;&nbsp; zm_usermap::main();<br>
-		<textarea cols="80" rows="1">level thread no_hud(); 
+		<textarea cols="80" rows="1">level thread ammo_upgrade();
         </textarea></p><p></p><p>&nbsp;&nbsp;&nbsp; 3.Ponga esto al final de su mapname.gsc<br>
-		<textarea cols="80" rows="7">function no_hud()
+		<textarea cols="240" rows="18">
+function ammo_upgrade()
 {
-    flag::wait_till( "initial_blackscreen_passed" );
-    wait(10);
-    getplayers()[0] SetClientUIVisibilityFlag( "hud_visible", 0 );
-}
-        </textarea></p><p></p><p>&nbsp;&nbsp;&nbsp; 4.compila el mapa y ya estara listo<br><br>
-		<b>Actualizado:</b> 24/10/2020
+while(1)
+	{
+	level waittill( "zmb_max_ammo_level" );	
+	//IPrintLnBold("ammo");
+	foreach(player in GetPlayers())
+		{
+		player.ScreecherPrimaryWeapons = player GetWeaponsListPrimaries();
+		foreach(gun in player.ScreecherPrimaryWeapons)
+			{
+			weap = GetWeapon(gun.name);
+			player SetWeaponAmmoClip(gun, weap.clipSize); 	
+			}
+		} 
+	}
+} </textarea></p><p></p><p>&nbsp;&nbsp;&nbsp; 4.compila el mapa y ya estara listo<br><br>
+		<b>Actualizado:</b> 03/04/2022
 		</p>
       </div>
 	   

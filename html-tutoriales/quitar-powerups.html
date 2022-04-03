@@ -1,28 +1,25 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
+<html lang="es"><head>
   <meta charset="utf-8">
-  <title>Quitar el Spawn de powerups</title>
   
-  <link rel="stylesheet" href="../estilo.css"> <!-- liqueo hoja de estilos-->
-  <link rel="stylesheet" href="../divisiones.css"> <!-- liqueo hoja de estilos divisiones-->
-  <link rel="icon" type="image/png" href="images/xdfer.png"> <!-- liqueo icono de la web-->
   
-</head>
+  <title>Quitar el Spawn de powerups</title><link rel="stylesheet" href="../estilo.css"><!-- liqueo hoja de estilos--> 
+  <link rel="stylesheet" href="../divisiones.css"><!-- liqueo hoja de estilos divisiones--> 
+  <link rel="icon" type="image/png" href="images/xdfer.png"><!-- liqueo icono de la web--></head>
 
 <body>
 
 
 <div id="encabezado-logo">
-<img src="images/logo.png" width="130" height="130">
+<img src="images/logo.png" height="130" width="130">
 </div>
  
 <div id="encabezado">
-<h1> <br> <a href= ../index.html style="text-decoration:none" class="color-fondo-oscuro">Home</a> &nbsp; 
-<a href= ../tutoriales.html style="text-decoration:none" class="color-fondo-oscuro">Tutoriales</a> &nbsp;
-<a href= ../lanzamientos.html style="text-decoration:none" class="color-fondo-oscuro">Lanzamientos</a> &nbsp;
-<a href= ../comparte.html style="text-decoration:none" class="color-fondo-oscuro">Compartir</a> &nbsp;
-<a href= ../peticiones.html style="text-decoration:none" class="color-fondo-oscuro">Peticiones</a></h1> 
+<h1> <br> <a href="../index.html" style="text-decoration: none;" class="color-fondo-oscuro">Home</a> &nbsp; 
+<a href="../tutoriales.html" style="text-decoration: none;" class="color-fondo-oscuro">Tutoriales</a> &nbsp;
+<a href="../lanzamientos.html" style="text-decoration: none;" class="color-fondo-oscuro">Lanzamientos</a> &nbsp;
+<a href="../aprende.html" style="text-decoration: none;" class="color-fondo-oscuro">Aprende</a> &nbsp;
+<a href="../peticiones.html" style="text-decoration: none;" class="color-fondo-oscuro">Peticiones</a></h1> 
 
 </div>
 
@@ -34,25 +31,21 @@
  <br><br>
  
        <div id="cuerpo-dentro-tutoriales-exp"> 
-        <h1>Quitar el Spawn de powerups</h1><br>
-		<h3>Version:1.0</h3><br>
-		<p><b>Descripcion:</b><br>
-		Con esto puedes quitar el spawn de cualquier powerup al matar un zombie<br><br>
-		<b>Instrucciones:</b><br> 
-		1.Abre tu mapname.gsc que se encuentra en usermaps/zm_tumapname/scripts/zm y añada lo siguiente su mapname.gsc<br>
+        <h1><br></h1><h1>&nbsp;&nbsp;<span style="color: rgb(51, 102, 255);">Quitar el Spawn de powerups</span></h1>
+		<h3>&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 204, 255);">Version:1.0</span></h3><br>
+		<p><b>&nbsp;&nbsp;&nbsp; -Descripcion:</b><br>&nbsp;&nbsp;&nbsp; Con esto puedes quitar el spawn de cualquier powerup al matar un zombie<br><br>
+		<b>&nbsp;&nbsp;&nbsp; -Instrucciones:</b><br>&nbsp;&nbsp;&nbsp;
+1.Abre tu mapname.gsc que se encuentra en
+usermaps/zm_tumapname/scripts/zm y añada lo siguiente su mapname.gsc<br>
 		</p>
-		<p>
-		2.Debajo de:<br>
-		 zm_usermap::main();<br>
-		<textarea cols='80' rows='6'>
-zm_powerups::powerup_remove_from_regular_drops( "full_ammo" );
+		<p></p><p>&nbsp;&nbsp;&nbsp; 2.Debajo de:<br>&nbsp;&nbsp;&nbsp; zm_usermap::main();<br>
+		<textarea cols="80" rows="6">zm_powerups::powerup_remove_from_regular_drops( "full_ammo" );
 zm_powerups::powerup_remove_from_regular_drops( "nuke" );
 zm_powerups::powerup_remove_from_regular_drops( "insta_kill" );
 zm_powerups::powerup_remove_from_regular_drops( "minigun" );
 zm_powerups::powerup_remove_from_regular_drops( "double_points" );
 zm_powerups::powerup_remove_from_regular_drops( "carpenter" ); 
-        </textarea><br>
-		3.compila el mapa y ya estara listo<br><br>
+        </textarea></p><p></p><p>&nbsp;&nbsp;&nbsp; 3.compila el mapa y ya estara listo<br><br>
 		<b>Actualizado:</b> 24/10/2020
 		</p>
       </div>
@@ -66,8 +59,7 @@ zm_powerups::powerup_remove_from_regular_drops( "carpenter" );
  
  
   <div id="pie">
-  <p> <br><h3 class="color-fondo"> xdferpc © </h3> </p>
+  <p> <br></p><h3 class="color-fondo"> xdferpc © </h3> 
   </div>
 
-</body>
-</html>
+</body></html>

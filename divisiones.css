@@ -86,6 +86,29 @@ body
 	width:80%;
 }
 
+#cuerpo-fuera-aprende          
+{
+	background-color:#EC7063;
+
+    text-align:left;
+	float:left;
+	height:1000px;
+	width:100%;
+}
+
+#cuerpo-dentro-aprende          
+{
+
+	background-color:#FCF3CF;
+	font-size: 20px;	
+    text-align:left;
+    margin-left: auto;
+    margin-right: auto;
+	float:center;
+	height:800px;
+	width:80%;
+}
+
 #cuerpo-fuera-tutoriales          
 {
 	background-color:#85C1E9;
@@ -114,6 +137,7 @@ body
     text-align:left;
     margin-left: auto;
     margin-right: auto;
+	padding: 20px,20px;
 	float:center;
 	height:1000px;
 	width:90%;

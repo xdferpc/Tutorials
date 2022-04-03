@@ -1,28 +1,25 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
+<html lang="es"><head>
   <meta charset="utf-8">
-  <title>Velocidad de los zombies</title>
   
-  <link rel="stylesheet" href="../estilo.css"> <!-- liqueo hoja de estilos-->
-  <link rel="stylesheet" href="../divisiones.css"> <!-- liqueo hoja de estilos divisiones-->
-  <link rel="icon" type="image/png" href="images/xdfer.png"> <!-- liqueo icono de la web-->
   
-</head>
+  <title>Velocidad de los zombies</title><link rel="stylesheet" href="../estilo.css"><!-- liqueo hoja de estilos--> 
+  <link rel="stylesheet" href="../divisiones.css"><!-- liqueo hoja de estilos divisiones--> 
+  <link rel="icon" type="image/png" href="images/xdfer.png"><!-- liqueo icono de la web--></head>
 
 <body>
 
 
 <div id="encabezado-logo">
-<img src="images/logo.png" width="130" height="130">
+<img src="images/logo.png" height="130" width="130">
 </div>
  
 <div id="encabezado">
-<h1> <br> <a href= ../index.html style="text-decoration:none" class="color-fondo-oscuro">Home</a> &nbsp; 
-<a href= ../tutoriales.html style="text-decoration:none" class="color-fondo-oscuro">Tutoriales</a> &nbsp;
-<a href= ../lanzamientos.html style="text-decoration:none" class="color-fondo-oscuro">Lanzamientos</a> &nbsp;
-<a href= ../comparte.html style="text-decoration:none" class="color-fondo-oscuro">Compartir</a> &nbsp;
-<a href= ../peticiones.html style="text-decoration:none" class="color-fondo-oscuro">Peticiones</a></h1> 
+<h1> <br> <a href="../index.html" style="text-decoration: none;" class="color-fondo-oscuro">Home</a> &nbsp; 
+<a href="../tutoriales.html" style="text-decoration: none;" class="color-fondo-oscuro">Tutoriales</a> &nbsp;
+<a href="../lanzamientos.html" style="text-decoration: none;" class="color-fondo-oscuro">Lanzamientos</a> &nbsp;
+<a href="../aprende.html" style="text-decoration: none;" class="color-fondo-oscuro">Aprende</a> &nbsp;
+<a href="../peticiones.html" style="text-decoration: none;" class="color-fondo-oscuro">Peticiones</a></h1> 
 
 </div>
 
@@ -34,30 +31,28 @@
  <br><br>
  
        <div id="cuerpo-dentro-tutoriales-exp"> 
-        <h1>Velocidad de los zombies</h1><br>
-		<h3>Version:1.0</h3><br>
-		<p><b>Descripcion:</b><br>
-		Con esto puedes aumentar o disminuir la velocidad de los zombies que aparecen apartir de la <b> Ronda:1</b> <br><br>
-		<b>Instrucciones:</b><br> 
-		1.Abra su mapname.gsc que se encuentra en usermaps/zm_tumapname/scripts/zm y añada lo siguiente su mapname.gsc<br>
+        <h1><br></h1><h1>&nbsp;&nbsp;<span style="color: rgb(51, 102, 255);">Velocidad de los zombies</span></h1>
+		<h3>&nbsp;&nbsp;&nbsp;<span style="color: rgb(51, 204, 255);"> Version:1.0</span></h3><br>
+		<p><b>&nbsp;&nbsp;&nbsp; -Descripcion:</b><br>&nbsp;&nbsp;&nbsp; Con esto puedes aumentar o disminuir la velocidad de los zombies que aparecen apartir de la <b> Ronda:1</b> <br><br>
+		<b>&nbsp;&nbsp;&nbsp; -Instrucciones:</b><br>&nbsp;&nbsp;&nbsp;
+1.Abra su mapname.gsc que se encuentra en
+usermaps/zm_tumapname/scripts/zm y añada lo siguiente su mapname.gsc<br>
 		</p>
-		<p>
-		2.Debajo de:<br>
-		 zm_usermap::main();<br>
-		<textarea cols='80' rows='1'>
-level thread new_zombie_speed();
-        </textarea><br>
-		3.Ponga esto al final de su mapname.gsc<br>
-		<textarea cols='240' rows='10'>
-function new_zombie_speed()
-{
-    level flag::wait_till( "initial_blackscreen_passed" );
-    zombie_utility::set_zombie_var( "zombie_move_speed_multiplier",       75,   false );  //  Multiplica por el numero de la ronda para obtener el valor de la velocidad del zombie.  0-40 = Andar, 41-70 = Correr, 71+ = sprint
-    zombie_utility::set_zombie_var( "zombie_move_speed_multiplier_easy",  75,   false );  //  Multiplica por el numero de la ronda para obtener el valor de la velocidad del zombie.  0-40 = Andar, 41-70 = Correr, 71+ = sprint
-    level.zombie_move_speed         = level.round_number * level.zombie_vars["zombie_move_speed_multiplier"];
-}
-        </textarea><br>
-		4.compila el mapa y ya estara listo<br><br>
+		<p></p><p>&nbsp;&nbsp;&nbsp; 2.Debajo de:<br>&nbsp;&nbsp;&nbsp; zm_usermap::main();<br>
+		<textarea cols="80" rows="1">level thread new_zombie_speed();
+        </textarea></p><p></p><p>&nbsp;&nbsp;&nbsp; 3.Ponga esto al final de su mapname.gsc<br>
+		<textarea cols="240" rows="10">function
+new_zombie_speed()
+{ level flag::wait_till( "initial_blackscreen_passed" );
+zombie_utility::set_zombie_var( "zombie_move_speed_multiplier", 75,
+false ); // Multiplica por el numero de la ronda para obtener el valor
+de la velocidad del zombie. 0-40 = Andar, 41-70 = Correr, 71+ = sprint
+zombie_utility::set_zombie_var( "zombie_move_speed_multiplier_easy",
+75, false ); // Multiplica por el numero de la ronda para obtener el
+valor de la velocidad del zombie. 0-40 = Andar, 41-70 = Correr, 71+ =
+sprint level.zombie_move_speed = level.round_number *
+level.zombie_vars["zombie_move_speed_multiplier"];
+} </textarea></p><p></p><p>&nbsp;&nbsp;&nbsp; 4.compila el mapa y ya estara listo<br><br>
 		<b>Actualizado:</b> 24/10/2020
 		</p>
       </div>
@@ -71,8 +66,7 @@ function new_zombie_speed()
  
  
   <div id="pie">
-  <p> <br><h3 class="color-fondo"> xdferpc © </h3> </p>
+  <p> <br></p><h3 class="color-fondo"> xdferpc © </h3> 
   </div>
 
-</body>
-</html>
+</body></html>

@@ -39,23 +39,28 @@
  
        
 	   
-         	<form action="envia.php" method="post" class="form-consulta"> 
-		<label>Nombre: <span>*</span>
-			<input type="text" name="nombre" placeholder="Nombre y apellido" class="campo-form" required>
-		</label>
-		
-		<label>Email: <span>*</span>
-			<input type="email" name="email" placeholder="Email" class="campo-form" required>
-		</label>
-		
-		<label>Que es lo que quieres que añada:
-			<textarea name="consulta" class="campo-form"></textarea>
-		</label>
-
-		<input type="submit" value="Enviar" class="btn-form">
-	   </form>
-	</center>		
-      
+<!--Título-->
+<p><H2>Mi formulario HTML</H2></p>
+<!--Formulario-->
+<FORM id="contacto" name="contacto" action="envia.php" method="POST">
+<p>
+<label>Nombre <input name="nombre" type="text" id="nombre"
+ size="42"/></label>
+</p>
+<p>
+<label>Empresa
+<input name="empresa" type="text" id="empresa" size="31"/></label></p>
+<p><label>E-mail <input name="mail" type="text" id="mail" size="43"/>
+</label>
+</p>
+<p><label>Mensaje<br>
+<textarea name="mensaje" cols="40" rows="8" id="mensaje">
+</textarea></label>
+</p>
+<p><input type="submit" name="Submit" value="Enviar"/></p>
+</FORM>
+	
+  <!--Formulario-->    
 	   
  
   </div>

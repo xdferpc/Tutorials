@@ -1,28 +1,25 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
+<html lang="es"><head>
   <meta charset="utf-8">
-  <title>Aumentar Espacios de bebidas</title>
   
-  <link rel="stylesheet" href="../estilo.css"> <!-- liqueo hoja de estilos-->
-  <link rel="stylesheet" href="../divisiones.css"> <!-- liqueo hoja de estilos divisiones-->
-  <link rel="icon" type="image/png" href="images/xdfer.png"> <!-- liqueo icono de la web-->
   
-</head>
+  <title>Aumentar Espacios de bebidas</title><link rel="stylesheet" href="../estilo.css"><!-- liqueo hoja de estilos--> 
+  <link rel="stylesheet" href="../divisiones.css"><!-- liqueo hoja de estilos divisiones--> 
+  <link rel="icon" type="image/png" href="images/xdfer.png"><!-- liqueo icono de la web--></head>
 
 <body>
 
 
 <div id="encabezado-logo">
-<img src="images/logo.png" width="130" height="130">
+<img src="images/logo.png" height="130" width="130">
 </div>
  
 <div id="encabezado">
-<h1> <br> <a href= ../index.html style="text-decoration:none" class="color-fondo-oscuro">Home</a> &nbsp; 
-<a href= ../tutoriales.html style="text-decoration:none" class="color-fondo-oscuro">Tutoriales</a> &nbsp;
-<a href= ../lanzamientos.html style="text-decoration:none" class="color-fondo-oscuro">Lanzamientos</a> &nbsp;
-<a href= ../comparte.html style="text-decoration:none" class="color-fondo-oscuro">Compartir</a> &nbsp;
-<a href= ../peticiones.html style="text-decoration:none" class="color-fondo-oscuro">Peticiones</a></h1> 
+<h1> <br> <a href="../index.html" style="text-decoration: none;" class="color-fondo-oscuro">Home</a> &nbsp; 
+<a href="../tutoriales.html" style="text-decoration: none;" class="color-fondo-oscuro">Tutoriales</a> &nbsp;
+<a href="../lanzamientos.html" style="text-decoration: none;" class="color-fondo-oscuro">Lanzamientos</a> &nbsp;
+<a href="../aprende.html" style="text-decoration: none;" class="color-fondo-oscuro">Aprende</a> &nbsp;
+<a href="../peticiones.html" style="text-decoration: none;" class="color-fondo-oscuro">Peticiones</a></h1> 
 
 </div>
 
@@ -34,28 +31,21 @@
  <br><br>
  
        <div id="cuerpo-dentro-tutoriales-exp"> 
-        <h1>Aumentar Espacios de Bebidas</h1><br>
-		<h3>Version:1.0</h3><br>
-		<p><b>Descripcion:</b><br>
-		Aumenta o reduce los espacios que tiene el jugador para bebidas en el juego <br><br>
-		<b>Instrucciones:</b><br> 
-		1.Abra su mapname.gsc que se encuentra en usermaps/zm_tumapname/scripts/zm y añada lo siguiente su mapname.gsc<br>
+        <h1><br></h1><h1>&nbsp;&nbsp;&nbsp;<span style="color: rgb(51, 102, 255);">Aumentar Espacios de Bebidas</span></h1><span style="font-weight: bold;">&nbsp;&nbsp;&nbsp; &nbsp;<span style="color: rgb(51, 204, 255);">&nbsp;&nbsp;</span></span><span style="color: rgb(51, 204, 255);">Version:1.0</span><br><br>
+		<p><b>&nbsp;&nbsp;&nbsp; -Descripcion:</b><br>&nbsp;&nbsp;&nbsp; Aumenta o reduce los espacios que tiene el jugador para bebidas en el juego <br><br>
+		<b>&nbsp;&nbsp;&nbsp; -Instrucciones:</b><br>&nbsp;&nbsp;&nbsp;
+1.Abra su mapname.gsc que se encuentra en
+usermaps/zm_tumapname/scripts/zm y añada lo siguiente su mapname.gsc</p><p><br>
 		</p>
-		<p>
-		2.Debajo de:<br>
-		 zm_usermap::main();<br>
-		<textarea cols='90' rows='1'>
-level thread set_perk_limit(10); //cambiar el 10 por el numero espacios que quieras
-        </textarea><br>
-		3.Ponga esto al final de su mapname.gsc<br>
-		<textarea cols='80' rows='7'>
-function set_perk_limit(num)
+		<p>&nbsp;&nbsp;&nbsp; 2.Debajo de:<br>&nbsp;&nbsp;&nbsp; zm_usermap::main();<br>
+		<textarea cols="90" rows="1">level thread set_perk_limit(10); //cambiar el 10 por el numero espacios que quieras
+        </textarea></p><p><br>&nbsp;&nbsp;&nbsp; 3.Ponga esto al final de su mapname.gsc<br>
+		<textarea cols="80" rows="7">function set_perk_limit(num)
 {
 	wait( 30 ); 
 	level.perk_purchase_limit = num;
 }
-        </textarea><br>
-		4.compila el mapa y ya estara listo<br><br>
+        </textarea></p><p><br>&nbsp;&nbsp;&nbsp; 4.compila el mapa y ya estara listo<br><br>
 		<b>Actualizado:</b> 24/10/2020
 		</p>
       </div>
@@ -69,8 +59,7 @@ function set_perk_limit(num)
  
  
   <div id="pie">
-  <p> <br><h3 class="color-fondo"> xdferpc © </h3> </p>
+  <p> <br></p><h3 class="color-fondo"> xdferpc © </h3> 
   </div>
 
-</body>
-</html>
+</body></html>
