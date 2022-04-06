@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+  <meta charset="utf-8">
+  
+  
+  <title>Creditos</title><link rel="stylesheet" href="../estilo.css"><!-- liqueo hoja de estilos--> 
+  <link rel="stylesheet" href="../divisiones.css"><!-- liqueo hoja de estilos divisiones--> 
+  <link rel="icon" type="image/png" href="images/xdfer.png"><!-- liqueo icono de la web--></head>
+<body>
+
+
+<div id="encabezado-logo">
+<img src="images/logo.png" height="130" width="130">
+</div>
+ 
+<div id="encabezado">
+<h1> <br> <a href="../index.html" style="text-decoration: none;" class="color-fondo-oscuro">Home</a> &nbsp; 
+<a href="../tutoriales.html" style="text-decoration: none;" class="color-fondo-oscuro">Tutoriales</a> &nbsp;
+<a href="../lanzamientos.html" style="text-decoration: none;" class="color-fondo-oscuro">Lanzamientos</a> &nbsp;
+<a href="../aprende.html" style="text-decoration: none;" class="color-fondo-oscuro">Aprende</a> &nbsp;
+<a href="../peticiones.html" style="text-decoration: none;" class="color-fondo-oscuro">Peticiones</a></h1> 
+
+</div>
+
+<div id="franja">   <!-- linea del color del fondo para separar letras etc...-->
+ </div>
+ 
+  
+  <div id="cuerpo-fuera-tutoriales"> 
+ <br><br>
+ 
+       <div id="cuerpo-dentro-tutoriales-exp"> 
+        <h1><br></h1><h1>&nbsp;&nbsp; <span style="color: rgb(51, 102, 255);">Creditos iniciales<br></span></h1><span style="font-weight: bold;">&nbsp;&nbsp;&nbsp; &nbsp;<span style="color: rgb(51, 204, 255);">&nbsp;&nbsp;</span></span><span style="color: rgb(51, 204, 255);">Version:1.0</span><br><br>
+		<p><b>&nbsp;&nbsp;&nbsp; -Descripcion:</b><br>&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; Con esto al empezar un mapa pondra unos estos abajo
+a la izquierda , que sirvan como creditos para su mapa<br><br>
+		<b>&nbsp;&nbsp;&nbsp; -Instrucciones:</b><br>&nbsp;&nbsp;&nbsp;
+1.Abra su mapname.gsc que se encuentra en
+usermaps/zm_tumapname/scripts/zm y añada lo siguiente su mapname.gsc</p><p><br>
+		</p>
+		<p>&nbsp;&nbsp;&nbsp; 2.Debajo de:<br>&nbsp;&nbsp;&nbsp; zm_usermap::main();</p><p style="color: rgb(51, 51, 51);">&nbsp;&nbsp;&nbsp;<small><small>-El 1 valor que esta entre "comillas" es el mensaje<br>&nbsp;&nbsp;&nbsp;
+-El 2 valor es el eje horizontal izq- derecha &nbsp;mas valor derecha ,
+menos izquierda se puede poner negativo</small></small></p><p style="color: rgb(51, 51, 51);"><small><small>&nbsp;&nbsp;&nbsp; -El 3 valor es el eje vertical arriba- abajo &nbsp;mas valor abajo , menos arriba se puede poner negativo</small></small></p><p style="color: rgb(51, 51, 51);"><small><small>&nbsp;&nbsp;&nbsp; -El 4 valor es el tamaño de la letra</small></small></p><p style="color: rgb(153, 153, 153);"><small><small><span style="color: rgb(51, 51, 51);">&nbsp;&nbsp;&nbsp; -El 5 valor es el tiempo que dura en pantalla las letras en segundo</span>s</small></small></p><p><br></p><p>Puedes crear tantos como se quiera yo e dejado dos de ejemplo
+		<br><br>
+		<textarea cols="90" rows="3">thread creat_simple_intro_hud( "Mapa de Prueba", 50, 100, 3, 5 );
+thread creat_simple_intro_hud( "Creado por Xdferpc", 50, 75, 2, 5 );
+        </textarea></p><p><br>&nbsp;&nbsp;&nbsp; 3.Ponga esto al final de su mapname.gsc<br>
+		<textarea cols="90" rows="22">function creat_simple_intro_hud( text, align_x, align_y, font_scale, fade_time )
+{
+    hud = NewHudElem();
+    hud.foreground = true;
+    hud.fontScale = font_scale;
+    hud.sort = 1;
+    hud.hidewheninmenu = false;
+    hud.alignX = "left";
+    hud.alignY = "bottom";
+    hud.horzAlign = "left";
+    hud.vertAlign = "bottom";
+    hud.x = align_x;
+    hud.y = hud.y - align_y;
+    hud.alpha = 1;
+    hud SetText( text );
+    wait( 8 );
+    hud fadeOverTime( fade_time );
+    hud.alpha = 0;
+    wait( fade_time );
+    hud Destroy();
+}
+        </textarea></p><p><br>&nbsp;&nbsp;&nbsp; 4.compila el mapa y ya estara listo<br><br>
+		<b>Actualizado:</b> 06/04/2022
+		</p>
+      </div>
+	   
+ 
+  </div>
+
+
+<div id="franja">   <!-- linea del color del fondo para separar letras etc...-->
+ </div>
+ 
+ 
+  <div id="pie">
+  <p> <br></p><h3 class="color-fondo"> xdferpc © </h3> 
+  </div>
+
+</body></html>

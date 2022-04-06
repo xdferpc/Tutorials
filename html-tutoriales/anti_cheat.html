@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+  <meta charset="utf-8">
+  
+  
+  <title>Anti Cheat</title><link rel="stylesheet" href="../estilo.css"><!-- liqueo hoja de estilos--> 
+  <link rel="stylesheet" href="../divisiones.css"><!-- liqueo hoja de estilos divisiones--> 
+  <link rel="icon" type="image/png" href="images/xdfer.png"><!-- liqueo icono de la web--></head>
+<body>
+
+
+<div id="encabezado-logo">
+<img src="images/logo.png" height="130" width="130">
+</div>
+ 
+<div id="encabezado">
+<h1> <br> <a href="../index.html" style="text-decoration: none;" class="color-fondo-oscuro">Home</a> &nbsp; 
+<a href="../tutoriales.html" style="text-decoration: none;" class="color-fondo-oscuro">Tutoriales</a> &nbsp;
+<a href="../lanzamientos.html" style="text-decoration: none;" class="color-fondo-oscuro">Lanzamientos</a> &nbsp;
+<a href="../aprende.html" style="text-decoration: none;" class="color-fondo-oscuro">Aprende</a> &nbsp;
+<a href="../peticiones.html" style="text-decoration: none;" class="color-fondo-oscuro">Peticiones</a></h1> 
+
+</div>
+
+<div id="franja">   <!-- linea del color del fondo para separar letras etc...-->
+ </div>
+ 
+  
+  <div id="cuerpo-fuera-tutoriales"> 
+ <br><br>
+ 
+       <div id="cuerpo-dentro-tutoriales-exp"> 
+        <h1><br></h1><h1>&nbsp;&nbsp; <span style="color: rgb(51, 102, 255);">Anticheat<br></span></h1><span style="font-weight: bold;">&nbsp;&nbsp;&nbsp; &nbsp;<span style="color: rgb(51, 204, 255);">&nbsp;&nbsp;</span></span><span style="color: rgb(51, 204, 255);">Version:1.0</span><br><br>
+		<p><b>&nbsp;&nbsp;&nbsp; -Descripcion:</b><br>&nbsp;&nbsp;&nbsp;
+Esto desactiva los trucos de la consola , esto no funcionara si hay
+algun mod que pueda funcionar para hacer trampas <br><br>
+		<b>&nbsp;&nbsp;&nbsp; -Instrucciones:</b><br>&nbsp;&nbsp;&nbsp;
+1.Abra su mapname.gsc que se encuentra en
+usermaps/zm_tumapname/scripts/zm y añada lo siguiente su mapname.gsc</p><p><br>
+		</p>
+		<p>&nbsp;&nbsp;&nbsp; 2.Debajo de:<br>&nbsp;&nbsp;&nbsp; zm_usermap::main();<br>
+		<textarea cols="90" rows="1">level anti_cheat(); 
+        </textarea></p><p><br>&nbsp;&nbsp;&nbsp; 3.Ponga esto al final de su mapname.gsc<br>
+		<textarea cols="80" rows="10">
+function anti_cheat()
+{
+    ModVar( "god", 0 );
+    ModVar( "noclip", 0 );
+    ModVar( "give", 0 );
+    ModVar( "notarget", 0 );
+    ModVar( "demigod", 0 );
+    ModVar( "ufo", 0 );  
+}
+        </textarea></p><p><br>&nbsp;&nbsp;&nbsp; 4.compila el mapa y ya estara listo<br><br>
+		<b>Actualizado:</b> 06/04/2022
+		</p>
+      </div>
+	   
+ 
+  </div>
+
+
+<div id="franja">   <!-- linea del color del fondo para separar letras etc...-->
+ </div>
+ 
+ 
+  <div id="pie">
+  <p> <br></p><h3 class="color-fondo"> xdferpc © </h3> 
+  </div>
+
+</body></html>

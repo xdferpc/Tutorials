@@ -41,18 +41,16 @@ usermaps/zm_tumapname/scripts/zm y añada lo siguiente su mapname.gsc<br>
 		<p></p><p>&nbsp;&nbsp;&nbsp; 2.Debajo de:<br>&nbsp;&nbsp;&nbsp; zm_usermap::main();<br>
 		<textarea cols="80" rows="1">level thread new_zombie_speed();
         </textarea></p><p></p><p>&nbsp;&nbsp;&nbsp; 3.Ponga esto al final de su mapname.gsc<br>
-		<textarea cols="240" rows="10">function
-new_zombie_speed()
-{ level flag::wait_till( "initial_blackscreen_passed" );
-zombie_utility::set_zombie_var( "zombie_move_speed_multiplier", 75,
-false ); // Multiplica por el numero de la ronda para obtener el valor
-de la velocidad del zombie. 0-40 = Andar, 41-70 = Correr, 71+ = sprint
-zombie_utility::set_zombie_var( "zombie_move_speed_multiplier_easy",
-75, false ); // Multiplica por el numero de la ronda para obtener el
-valor de la velocidad del zombie. 0-40 = Andar, 41-70 = Correr, 71+ =
-sprint level.zombie_move_speed = level.round_number *
-level.zombie_vars["zombie_move_speed_multiplier"];
-} </textarea></p><p></p><p>&nbsp;&nbsp;&nbsp; 4.compila el mapa y ya estara listo<br><br>
+		<textarea cols="220" rows="10">
+function new_zombie_speed()
+{
+    level flag::wait_till( "initial_blackscreen_passed" );
+    zombie_utility::set_zombie_var( "zombie_move_speed_multiplier",       75,   false );    //  Multiply by the round number to give the base speed value.  0-40 = walk, 41-70 = run, 71+ = sprint
+    zombie_utility::set_zombie_var( "zombie_move_speed_multiplier_easy",  75,   false );    //  Multiply by the round number to give the base speed value.  0-40 = walk, 41-70 = run, 71+ = sprint
+    level.zombie_move_speed         = level.round_number * level.zombie_vars["zombie_move_speed_multiplier"];
+}
+ 
+ </textarea></p><p></p><p>&nbsp;&nbsp;&nbsp; 4.compila el mapa y ya estara listo<br><br>
 		<b>Actualizado:</b> 24/10/2020
 		</p>
       </div>
